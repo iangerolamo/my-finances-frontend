@@ -1,9 +1,15 @@
-import React from 'react';
-import SignIn from './pages/SignIn'
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes';
+import GlobalStyle from './styles/global';
 
 function App() {
   return (
-    <SignIn />
+    <>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
+    <GlobalStyle />
+  </>
   );
 }
 
