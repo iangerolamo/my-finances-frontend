@@ -16,10 +16,10 @@ const SignIn: React.FC = () => (
 
        <button type="submit">Entrar</button>
 
-       <a href="forgot">Esqueci minha senha</a>
+       <a href="/signup">Esqueci minha senha</a>
      </form>
 
-     <a href="criar">
+     <a href="/signup">
        <FiLogIn />
        Criar conta
      </a>

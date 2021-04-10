@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
-import signInBackgroundImg from '../../assets/sign-in-background2.jpg'
+
+import signUpBackground from '../../assets/sign-up-background.jpg';
 
 export const Container = styled.div`
-  height: 100vh; 
+  height: 100vh;
 
   display: flex;
   align-items: stretch;
@@ -22,7 +23,7 @@ export const Content = styled.div`
     width: 376px;
     height: 64px;
   }
-  
+
   form {
     margin: 80px 0;
     width: 340px;
@@ -44,6 +45,7 @@ export const Content = styled.div`
         margin-top: 8px;
       }
     }
+
     button {
       background: #ff9000;
       height: 56px;
@@ -59,36 +61,13 @@ export const Content = styled.div`
         background: ${shade(0.2, '#ff9000')};
       }
     }
-    a {
-      color: #f4ede8;
-      display: block;
-      margin-top: 24px;
-      text-decoration: none;
-      transition: color 0.2s;
-      &:hover {
-        color: ${shade(0.2, '#f4ede8')};
-      }
-    }
-  }
-  > a {
-    color: #ff9000;
-    display: block;
-    margin-top: 24px;
-    text-decoration: none;
-    transition: color 0.2s;
-    display: flex;
-    align-items: center;
-    svg {
-      margin-right: 16px;
-    }
-    &:hover {
-      color: ${shade(0.2, '#ff9000')};
-    }
-  }
+
 `;
+
+
 
 export const Background = styled.div`
   flex: 1;
-  background: url(${signInBackgroundImg}) no-repeat center;
+  background: url(${signUpBackground}) no-repeat center;
   background-size: cover;
 `;
