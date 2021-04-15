@@ -1,0 +1,77 @@
+.register {
+  margin:0 auto;
+  max-width:500px;
+}
+.register-header {
+  color:#fff;
+  text-align:center;
+  font-size:200%;
+  padding-top:40px;
+}
+ .register-header h1 {
+   color:#5636d3;
+   text-shadow: 0px 5px 15px #000; 
+}
+.register-form {
+  border:.5px solid #fff;
+  border-radius: 45px;
+  background:#5636d3;
+  box-shadow:0px 0px 10px #000;
+}
+.register-form h3 {
+  text-align:left;
+  margin-left:40px;
+  color:#fff;
+}
+.register-form {
+  box-sizing:border-box;
+  padding-top:15px;
+	padding-bottom:10%;
+  margin:5% auto;
+  text-align:center;
+}
+.register input[type="text"],
+.register input[type="password"] {
+  max-width:400px;
+	width: 80%;
+  line-height:3em;
+  font-family: 'Roboto Slab', serif;
+  margin:1em 2em;
+  border-radius:5px;
+  border:2px solid #f2f2f2;
+  outline:none;
+  padding-left:10px;
+}
+.register-form input[type="button"] {
+  height:30px;
+  width:100px;
+  background: #FF9000;
+  border:1px solid #f2f2f2;
+  border-radius:20px;
+  color: #000;
+  text-transform:uppercase;
+  font-family: 'Roboto Slab', serif;
+  cursor:pointer;
+}
+.sign-in{
+  color:#f2f2f2;
+  margin-left:-60%;
+  cursor:pointer;
+  text-decoration:underline;
+}
+
+
+
+/*Media Querie*/
+@media only screen and (min-width : 150px) and (max-width : 530px){
+  .login-form h3 {
+    text-align:center;
+    margin:0;
+  }
+  .sign-up, .no-access {
+    margin:10px 0;
+  }
+  .login-button {
+    margin-bottom:10px;
+  }
+}
