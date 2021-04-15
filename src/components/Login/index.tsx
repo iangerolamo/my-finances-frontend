@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './styles.css';
+import api from '../../service/api';
+
 
 const Login: React.FC = () => {
 
@@ -7,10 +9,15 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState("");
 
   function entrar() {
-    console.log({
-      "username" : email,
-      "password" : password
-    })
+    api.post('user/authenticate', {
+      email: email,
+      password: password
+    }).then(response => {
+      console.log(response.data)
+    }).catch(error => {
+      console.log(error.response.data)
+    });
+      
   }
 
   return (
