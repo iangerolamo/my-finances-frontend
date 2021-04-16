@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './styles.css';
 import api from '../../service/api';
+import { useHistory } from 'react-router-dom'
 
 const Register: React.FC = () => {
+  const history = useHistory();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassord] = useState("");
@@ -14,7 +16,7 @@ const Register: React.FC = () => {
       email: email,
       password: password
     }).then(response => {
-      console.log(response.data)
+      history.push("/signup")
     }).catch(error => {
       console.log(error.response.data)
     });
@@ -58,7 +60,7 @@ const Register: React.FC = () => {
         onChange={e => setPasswordAgain(e.target.value)}
       />
       <br/>
-      <input onClick={register} type="button" value="Login" className="login-button"/>
+      <input onClick={register} type="button" value="Cadastrar" className="login-button"/>
       <br />
       <a href="/" className="sign-in">Voltar para login!</a>
     </div>
