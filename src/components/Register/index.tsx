@@ -1,17 +1,23 @@
 import React, { useState } from 'react';
 import './styles.css';
+import api from '../../service/api';
 
 const Register: React.FC = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassord] = useState("");
   const [passwordAgain, setPasswordAgain] = useState("");
 
   function register() {
-    console.log({
-      "e-mail" : email,
-      "password" : password,
-      "password again" : passwordAgain
-    })
+    api.post('user', {
+      name: name,
+      email: email,
+      password: password
+    }).then(response => {
+      console.log(response.data)
+    }).catch(error => {
+      console.log(error.response.data)
+    });
   }
 
   return (
@@ -20,6 +26,14 @@ const Register: React.FC = () => {
       <h1>Faça o seu cadastro</h1>
     </div>
     <div className="register-form">
+    <h3>Digite seu nome:</h3>
+      <input 
+        type="text" 
+        placeholder="Digite seu nome"
+        value={name}
+        onChange={e => setName(e.target.value)}
+      />
+      <br/>
       <h3>Digite seu e-mail:</h3>
       <input 
         type="text" 
