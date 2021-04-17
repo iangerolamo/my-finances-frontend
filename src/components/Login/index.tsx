@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './styles.css';
 import api from '../../service/api';
+import { useHistory } from 'react-router-dom';
 
 
 const Login: React.FC = () => {
-
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -13,6 +14,8 @@ const Login: React.FC = () => {
       email: email,
       password: password
     }).then(response => {
+      localStorage.setItem('_usuario_logado', JSON.stringify(response.data))
+      history.push("/dashboard")
       console.log(response.data)
     }).catch(error => {
       console.log(error.response.data)

@@ -8,12 +8,11 @@ export default createGlobalStyle`
     outline: 0;
   }
   body {
-
+    background: #F0F2F5 ;
     -webkit-font-smoothing: antialiased;
   }
   body, input, button {
-    font-family: 'Roboto Slab', serif;
-    font-size: 16px;
+    font: 16px "Poppins", sans-serif;
   }
   h1, h2, h3, h4, h5, h6, strong {
     font-weight: 500;

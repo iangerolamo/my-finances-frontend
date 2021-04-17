@@ -14,7 +14,10 @@ const MainHeader: React.FC = () => (
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/signup">Usuários</a>
+            <a href="/dashboard">Dashboard</a>
+          </li>
+          <li>
+            <a href="/signup">Cadastro</a>
           </li>
           <li>
             <a href="/">Lançamentos</a>

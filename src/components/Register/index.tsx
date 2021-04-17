@@ -16,7 +16,7 @@ const Register: React.FC = () => {
       email: email,
       password: password
     }).then(response => {
-      history.push("/signup")
+      history.push("/")
     }).catch(error => {
       console.log(error.response.data)
     });
